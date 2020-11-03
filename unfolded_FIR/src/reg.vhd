@@ -6,13 +6,11 @@ entity reg is
 generic(
 	Nbit : integer := 8);
 
-port (
-	CLK : IN std_logic;
-	RST_n : IN std_logic;
-	Load : IN std_logic;
-	S_in : IN signed (Nbit-1 downto 0);
-	S_out : OUT signed(Nbit-1 downto 0)
-	);
+port (	CLK : IN std_logic;
+		RST_n : IN std_logic;
+		Load : IN std_logic;
+		S_in : IN signed (Nbit-1 downto 0);
+		S_out : OUT signed(Nbit-1 downto 0));
 end reg;
 
 architecture bhe of reg is 

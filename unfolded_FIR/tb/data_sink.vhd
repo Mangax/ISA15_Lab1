@@ -32,9 +32,9 @@ begin  -- beh
       if (VIN = '1') then
         write(line_out1, conv_integer(signed(DIN3k)));
         writeline(res_fp, line_out1);
-	write(line_out2, conv_integer(signed(DIN3k1)));
+		write(line_out2, conv_integer(signed(DIN3k1)));
         writeline(res_fp, line_out2);
-	write(line_out3, conv_integer(signed(DIN3k2)));
+		write(line_out3, conv_integer(signed(DIN3k2)));
         writeline(res_fp, line_out3);
       end if;
     end if;
