@@ -26,7 +26,7 @@ module tb_fir ();
 	      .RST_n(RST_n_i));
 
    data_maker SM(.CLK(CLK_i),
-	     .RST_n(RST_n_i),
+	         .RST_n(RST_n_i),
 		 .VOUT(VIN_i),
 		 .DOUT(DIN_i),
 		 .H0(H0_i),
@@ -45,20 +45,20 @@ module tb_fir ();
    FIR_filter UUT(.CLK(CLK_i),
 	     .RST_n(RST_n_i),
 	     .DIN(DIN_i),
-         .VIN(VIN_i),
-	     .a1(H0_i),
-	     .a2(H1_i),
-	     .a3(H2_i),
-	     .a4(H3_i),
-		 .a5(H4_i),
-		 .a6(H5_i),
-		 .a7(H6_i),
-		 .a8(H7_i),
-		 .a9(H8_i),
-		 .a10(H9_i),
-		 .a11(H10_i),
-         .DOUT(DOUT_i),
-         .VOUT(VOUT_i));
+             .VIN(VIN_i),
+	     .H0(H0_i),
+	     .H1(H1_i),
+	     .H2(H2_i),
+	     .H3(H3_i),
+	     .H4(H4_i),
+	     .H5(H5_i),
+	     .H6(H6_i),
+	     .H7(H7_i),
+	     .H8(H8_i),
+	     .H9(H9_i),
+	     .H10(H10_i),
+             .DOUT(DOUT_i),
+             .VOUT(VOUT_i));
 
    data_sink DS(.CLK(CLK_i),
 		.RST_n(RST_n_i),
@@ -66,3 +66,5 @@ module tb_fir ();
 		.DIN(DOUT_i));   
 
 endmodule
+
+		   

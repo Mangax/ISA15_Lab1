@@ -20,20 +20,16 @@ architecture beh of data_sink is
 begin  -- beh
 
   process (CLK, RST_n)
-    file res_fp : text open WRITE_MODE is "../data/results.txt";
-    variable line_out : line; 
-	
+    file res_fp : text open WRITE_MODE is "../data/tb_results.txt";
+    variable line_out : line;    
   begin  -- process
-
     if RST_n = '0' then                 -- asynchronous reset (active low)
       null;
-	  
     elsif CLK'event and CLK = '1' then  -- rising clock edge
       if (VIN = '1') then
         write(line_out, conv_integer(signed(DIN)));
         writeline(res_fp, line_out);
-      
-	  end if;
+      end if;
     end if;
   end process;
 
