@@ -1,0 +1,71 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : parallel_fir
+Version: O-2018.06-SP4
+Date   : Sat Oct 31 10:50:39 2020
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: H9[7] (input port clocked by MY_CLK)
+  Endpoint: branch3k2/arith9/reg_m/S_out_reg[13]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  parallel_fir       5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  H9[7] (in)                                              0.00       0.50 f
+  branch3k2/H9[7] (FIR_scheme_1)                          0.00       0.50 f
+  branch3k2/arith9/a[7] (arith_module_Nbit8_2)            0.00       0.50 f
+  branch3k2/arith9/mx/inb[7] (multiplier_Nbit8_2)         0.00       0.50 f
+  branch3k2/arith9/mx/mult_19/b[7] (multiplier_Nbit8_2_DW_mult_tc_0_0)
+                                                          0.00       0.50 f
+  branch3k2/arith9/mx/mult_19/U413/ZN (XNOR2_X1)          0.07       0.57 f
+  branch3k2/arith9/mx/mult_19/U398/ZN (OAI22_X1)          0.06       0.64 r
+  branch3k2/arith9/mx/mult_19/U396/ZN (INV_X1)            0.03       0.67 f
+  branch3k2/arith9/mx/mult_19/U134/S (FA_X1)              0.15       0.81 r
+  branch3k2/arith9/mx/mult_19/U133/S (FA_X1)              0.11       0.92 f
+  branch3k2/arith9/mx/mult_19/U339/ZN (NOR2_X1)           0.08       1.00 r
+  branch3k2/arith9/mx/mult_19/U279/ZN (OAI21_X2)          0.06       1.06 f
+  branch3k2/arith9/mx/mult_19/U309/ZN (AOI21_X1)          0.05       1.11 r
+  branch3k2/arith9/mx/mult_19/U492/ZN (OAI21_X1)          0.04       1.14 f
+  branch3k2/arith9/mx/mult_19/U458/ZN (XNOR2_X1)          0.05       1.20 f
+  branch3k2/arith9/mx/mult_19/product[13] (multiplier_Nbit8_2_DW_mult_tc_0_0)
+                                                          0.00       1.20 f
+  branch3k2/arith9/mx/o[13] (multiplier_Nbit8_2)          0.00       1.20 f
+  branch3k2/arith9/reg_m/S_in[13] (reg_Nbit16_2)          0.00       1.20 f
+  branch3k2/arith9/reg_m/U22/ZN (NAND2_X1)                0.03       1.23 r
+  branch3k2/arith9/reg_m/U23/ZN (OAI21_X1)                0.03       1.26 f
+  branch3k2/arith9/reg_m/S_out_reg[13]/D (DFFR_X1)        0.01       1.26 f
+  data arrival time                                                  1.26
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  branch3k2/arith9/reg_m/S_out_reg[13]/CK (DFFR_X1)       0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -1.26
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.38
+
+
+1

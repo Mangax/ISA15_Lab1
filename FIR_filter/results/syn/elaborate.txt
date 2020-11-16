@@ -1,0 +1,55 @@
+Running PRESTO HDLC
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't1' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't2' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't3' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't4' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't5' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't6' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't7' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't8' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't9' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:69: The initial value for signal 't10' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's0' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's1' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's2' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's3' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's4' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's5' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's6' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's7' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's8' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's9' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:70: The initial value for signal 's10' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Warning:  ../src/FIR_filter.vhd:71: The initial value for signal 'm' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+
+Inferred memory devices in process
+	in routine FIR_filter line 111 in file
+		'../src/FIR_filter.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      VOUT_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'FIR_filter'.
+Information: Building the design 'reg' instantiated from design 'FIR_filter' with
+	the parameters "Nbit=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine reg_Nbit8 line 22 in file
+		'../src/reg.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      S_out_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'multiplier' instantiated from design 'FIR_filter' with
+	the parameters "Nbit=8". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'arith_module' instantiated from design 'FIR_filter' with
+	the parameters "Nbit=8". (HDL-193)
+Warning:  ../src/arith_module.vhd:32: The initial value for signal 'm' is not supported for synthesis. Presto ignores it.  (ELAB-130)
+Presto compilation completed successfully.
+1

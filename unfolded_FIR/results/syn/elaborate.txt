@@ -1,0 +1,15 @@
+Running PRESTO HDLC
+
+Inferred memory devices in process
+	in routine parallel_fir line 122 in file
+		'../src/parallel_fir.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      VOUT_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Warning: Overwriting design file '/home/isa15/Laboratori/Lab1/VHDL_unfolded_pipe/syn/parallel_fir.db'. (DDB-24)
+Elaborated 1 design.
+Current design is now 'parallel_fir'.
+1

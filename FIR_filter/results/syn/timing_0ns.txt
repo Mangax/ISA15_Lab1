@@ -1,0 +1,148 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_filter
+Version: O-2018.06-SP4
+Date   : Sat Oct 24 11:04:54 2020
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: H1[1] (input port clocked by MY_CLK)
+  Endpoint: DOUT[7] (output port clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  H1[1] (in)                                              0.00       0.50 f
+  M_1/a[1] (arith_module_Nbit8_0)                         0.00       0.50 f
+  M_1/mx/inb[1] (multiplier_Nbit8_10)                     0.00       0.50 f
+  M_1/mx/mult_20/b[1] (multiplier_Nbit8_10_DW_mult_tc_2)
+                                                          0.00       0.50 f
+  M_1/mx/mult_20/U347/ZN (INV_X1)                         0.06       0.56 r
+  M_1/mx/mult_20/U430/ZN (NOR2_X1)                        0.04       0.60 f
+  M_1/mx/mult_20/U159/CO (HA_X1)                          0.06       0.66 f
+  M_1/mx/mult_20/U379/ZN (NAND2_X1)                       0.03       0.69 r
+  M_1/mx/mult_20/U380/ZN (NAND3_X1)                       0.05       0.74 f
+  M_1/mx/mult_20/U385/ZN (NAND2_X1)                       0.04       0.77 r
+  M_1/mx/mult_20/U386/ZN (NAND3_X1)                       0.04       0.81 f
+  M_1/mx/mult_20/U147/CO (FA_X1)                          0.10       0.92 f
+  M_1/mx/mult_20/U141/S (FA_X1)                           0.14       1.06 r
+  M_1/mx/mult_20/U261/ZN (XNOR2_X1)                       0.05       1.11 f
+  M_1/mx/mult_20/U268/ZN (NOR2_X2)                        0.05       1.17 r
+  M_1/mx/mult_20/U440/ZN (OAI21_X1)                       0.03       1.20 f
+  M_1/mx/mult_20/U247/ZN (AOI21_X1)                       0.05       1.25 r
+  M_1/mx/mult_20/U417/ZN (INV_X1)                         0.04       1.29 f
+  M_1/mx/mult_20/U448/ZN (AOI21_X1)                       0.05       1.34 r
+  M_1/mx/mult_20/U283/ZN (XNOR2_X1)                       0.07       1.40 r
+  M_1/mx/mult_20/product[9] (multiplier_Nbit8_10_DW_mult_tc_2)
+                                                          0.00       1.40 r
+  M_1/mx/o[9] (multiplier_Nbit8_10)                       0.00       1.40 r
+  M_1/add_38/A[2] (arith_module_Nbit8_0_DW01_add_3)       0.00       1.40 r
+  M_1/add_38/U117/ZN (NAND2_X1)                           0.04       1.45 f
+  M_1/add_38/U89/ZN (AND2_X1)                             0.04       1.49 f
+  M_1/add_38/U88/ZN (XNOR2_X1)                            0.06       1.55 f
+  M_1/add_38/SUM[2] (arith_module_Nbit8_0_DW01_add_3)     0.00       1.55 f
+  M_1/Sum_out[2] (arith_module_Nbit8_0)                   0.00       1.55 f
+  M_2/Sum_pre[2] (arith_module_Nbit8_9)                   0.00       1.55 f
+  M_2/add_38/B[2] (arith_module_Nbit8_9_DW01_add_2)       0.00       1.55 f
+  M_2/add_38/U69/ZN (OR2_X1)                              0.06       1.61 f
+  M_2/add_38/U74/ZN (NAND2_X1)                            0.03       1.64 r
+  M_2/add_38/U73/ZN (XNOR2_X1)                            0.06       1.69 r
+  M_2/add_38/SUM[2] (arith_module_Nbit8_9_DW01_add_2)     0.00       1.69 r
+  M_2/Sum_out[2] (arith_module_Nbit8_9)                   0.00       1.69 r
+  M_3/Sum_pre[2] (arith_module_Nbit8_8)                   0.00       1.69 r
+  M_3/add_38/B[2] (arith_module_Nbit8_8_DW01_add_3)       0.00       1.69 r
+  M_3/add_38/U110/ZN (NAND2_X1)                           0.04       1.73 f
+  M_3/add_38/U91/ZN (INV_X1)                              0.03       1.76 r
+  M_3/add_38/U78/ZN (AOI21_X1)                            0.03       1.79 f
+  M_3/add_38/U105/ZN (OAI21_X1)                           0.06       1.85 r
+  M_3/add_38/U101/ZN (INV_X1)                             0.03       1.88 f
+  M_3/add_38/U115/ZN (OAI21_X1)                           0.04       1.92 r
+  M_3/add_38/U107/ZN (XNOR2_X1)                           0.07       1.99 r
+  M_3/add_38/SUM[5] (arith_module_Nbit8_8_DW01_add_3)     0.00       1.99 r
+  M_3/Sum_out[5] (arith_module_Nbit8_8)                   0.00       1.99 r
+  M_4/Sum_pre[5] (arith_module_Nbit8_7)                   0.00       1.99 r
+  M_4/add_38/B[5] (arith_module_Nbit8_7_DW01_add_3)       0.00       1.99 r
+  M_4/add_38/U78/ZN (XNOR2_X1)                            0.07       2.06 r
+  M_4/add_38/U88/ZN (XNOR2_X1)                            0.06       2.12 r
+  M_4/add_38/SUM[5] (arith_module_Nbit8_7_DW01_add_3)     0.00       2.12 r
+  M_4/Sum_out[5] (arith_module_Nbit8_7)                   0.00       2.12 r
+  M_5/Sum_pre[5] (arith_module_Nbit8_6)                   0.00       2.12 r
+  M_5/add_38/B[5] (arith_module_Nbit8_6_DW01_add_2)       0.00       2.12 r
+  M_5/add_38/U104/ZN (NAND2_X1)                           0.04       2.16 f
+  M_5/add_38/U128/ZN (NAND2_X1)                           0.04       2.19 r
+  M_5/add_38/U122/ZN (XNOR2_X1)                           0.06       2.26 r
+  M_5/add_38/SUM[5] (arith_module_Nbit8_6_DW01_add_2)     0.00       2.26 r
+  M_5/Sum_out[5] (arith_module_Nbit8_6)                   0.00       2.26 r
+  M_6/Sum_pre[5] (arith_module_Nbit8_5)                   0.00       2.26 r
+  M_6/add_38/B[5] (arith_module_Nbit8_5_DW01_add_3)       0.00       2.26 r
+  M_6/add_38/U84/ZN (OR2_X1)                              0.04       2.30 r
+  M_6/add_38/U119/ZN (NAND2_X1)                           0.03       2.33 f
+  M_6/add_38/U118/Z (XOR2_X1)                             0.07       2.40 f
+  M_6/add_38/SUM[5] (arith_module_Nbit8_5_DW01_add_3)     0.00       2.40 f
+  M_6/Sum_out[5] (arith_module_Nbit8_5)                   0.00       2.40 f
+  M_7/Sum_pre[5] (arith_module_Nbit8_4)                   0.00       2.40 f
+  M_7/add_38/B[5] (arith_module_Nbit8_4_DW01_add_4)       0.00       2.40 f
+  M_7/add_38/U113/ZN (NAND2_X1)                           0.04       2.43 r
+  M_7/add_38/U102/ZN (INV_X1)                             0.03       2.46 f
+  M_7/add_38/U135/ZN (AOI21_X1)                           0.05       2.51 r
+  M_7/add_38/U127/ZN (OAI21_X1)                           0.04       2.55 f
+  M_7/add_38/U125/ZN (XNOR2_X1)                           0.06       2.61 f
+  M_7/add_38/SUM[6] (arith_module_Nbit8_4_DW01_add_4)     0.00       2.61 f
+  M_7/Sum_out[6] (arith_module_Nbit8_4)                   0.00       2.61 f
+  M_8/Sum_pre[6] (arith_module_Nbit8_3)                   0.00       2.61 f
+  M_8/add_38/B[6] (arith_module_Nbit8_3_DW01_add_3)       0.00       2.61 f
+  M_8/add_38/U119/ZN (NOR2_X1)                            0.05       2.65 r
+  M_8/add_38/U99/ZN (INV_X1)                              0.03       2.68 f
+  M_8/add_38/U121/ZN (AOI21_X1)                           0.04       2.72 r
+  M_8/add_38/U107/ZN (OAI21_X1)                           0.04       2.76 f
+  M_8/add_38/U122/ZN (XNOR2_X1)                           0.06       2.82 f
+  M_8/add_38/SUM[7] (arith_module_Nbit8_3_DW01_add_3)     0.00       2.82 f
+  M_8/Sum_out[7] (arith_module_Nbit8_3)                   0.00       2.82 f
+  M_9/Sum_pre[7] (arith_module_Nbit8_2)                   0.00       2.82 f
+  M_9/add_38/B[7] (arith_module_Nbit8_2_DW01_add_4)       0.00       2.82 f
+  M_9/add_38/U107/ZN (NOR2_X1)                            0.05       2.88 r
+  M_9/add_38/U114/ZN (OAI21_X1)                           0.03       2.91 f
+  M_9/add_38/U101/ZN (AOI21_X1)                           0.06       2.96 r
+  M_9/add_38/U73/ZN (XNOR2_X1)                            0.06       3.03 r
+  M_9/add_38/SUM[8] (arith_module_Nbit8_2_DW01_add_4)     0.00       3.03 r
+  M_9/Sum_out[8] (arith_module_Nbit8_2)                   0.00       3.03 r
+  M_10/Sum_pre[8] (arith_module_Nbit8_1)                  0.00       3.03 r
+  M_10/add_38/B[8] (arith_module_Nbit8_1_DW01_add_2)      0.00       3.03 r
+  M_10/add_38/U86/ZN (NOR2_X1)                            0.03       3.05 f
+  M_10/add_38/U85/ZN (NOR2_X1)                            0.04       3.09 r
+  M_10/add_38/U88/ZN (XNOR2_X1)                           0.06       3.16 r
+  M_10/add_38/SUM[8] (arith_module_Nbit8_1_DW01_add_2)
+                                                          0.00       3.16 r
+  M_10/Sum_out[8] (arith_module_Nbit8_1)                  0.00       3.16 r
+  DOUT[7] (out)                                           0.02       3.18 r
+  data arrival time                                                  3.18
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  output external delay                                  -0.50      -0.57
+  data required time                                                -0.57
+  --------------------------------------------------------------------------
+  data required time                                                -0.57
+  data arrival time                                                 -3.18
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -3.75
+
+
+1
